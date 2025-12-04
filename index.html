@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Memory Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Text Memory Checker</h1>
+    <div id="setupScreen">
+        <div class="block">
+            <h2>Whitelist (ignored words)</h2>
+            <input id="whitelistInput" class="input" type="text"
+                   placeholder="Nhập các từ bỏ qua, ví dụ: [kw], [name], ...">
+            <p class="hint">Các từ này sẽ KHÔNG được tính là lỗi khi kiểm tra.</p>
+        </div>
+
+        <div class="block">
+            <h2>Sample text</h2>
+            <textarea id="sampleText" class="textarea" rows="10">
+The impact of [KW], which frequently generated a great deal of heated debate, has now become even more controversial. Some proponents maintain that [KW] would bring about various advantages, while opponents claim that the opposite holds true. This essay will elaborate on both sides of the debate, and thus lead to a logical conclusion.
+At the outset, there are numerous reasons for the benefits of [KW]. However, the most crucial one stems from the fact that [KW] will play a vital role. According to a recent study conducted by reputable researchers at Sydney University, [KW] will greatly contribute to [KW]. Hence, [KW] will offer tons of benefits to [KW].
+Nevertheless, some critics adopt an opposing view and tend to believe that the opposite holds true. It is largely attributed to the fact that [KW] may have negative impacts on [KW]. For instance, the downside of [KW] is critical to [KW]. Therefore, the disadvantages of [KW] might adversely affect [KW].
+In conclusion, while there are strong arguments on both sides of the debate, I strongly believe that the pros of [KW] are undeniable.</textarea>
+        </div>
+
+        <div class="actions">
+            <button id="startButton">Start</button>
+        </div>
+
+    </div>
+
+    <div id="practiceScreen" style="display:none;">
+        <div class="block">
+            <h2>Your text (from memory)</h2>
+            <textarea id="userText" class="textarea" rows="8"
+                      placeholder="Gõ lại đoạn văn theo trí nhớ..."></textarea>
+        </div>
+
+        <div class="actions">
+            <button id="checkButton">Check</button>
+            <button id="restartButton" style="display:none;">Restart</button>
+            <span id="summary"></span>
+        </div>
+        <div class="block">
+            <h2>Result</h2>
+            <h3>Sample text</h3>
+            <div id="sampleHighlighted" class="result-box"></div>
+
+            <h3>Error details</h3>
+            <ul id="errorList" class="error-list"></ul>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
